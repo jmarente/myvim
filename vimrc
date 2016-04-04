@@ -48,6 +48,7 @@ let g:airline_theme = 'luna'
 
 " Vim markdown config
 let g:vim_markdown_toml_frontmatter = 1
+let g:vim_markdown_folding_disabled = 1
 
 " SnipMate
 " :let g:snips_trigger_key = '<C-tab>'
@@ -73,15 +74,17 @@ set title
 " Favorite color schemes
 
 silent! colorscheme triplejelly
-" colorscheme znake
-" colorscheme benlight
-" colorscheme candyman
-" colorscheme jelleybeans
-" colorscheme luna-term
-" colorscheme made_of_color
-" colorscheme desertink
-"
-highlight LineNr ctermfg=grey
+" silent! colorscheme znake
+" silent! colorscheme benlight
+" silent! colorscheme candyman
+" silent! colorscheme jelleybeans
+" silent! colorscheme luna-term
+" silent! colorscheme made_of_color
+" silent! colorscheme desertink
+
+if g:colors_name == 'triplejelly'
+    highlight LineNr ctermfg=grey
+endif
 
 
 " Search
