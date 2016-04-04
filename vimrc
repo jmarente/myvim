@@ -16,6 +16,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'ervandew/supertab'
 Bundle 'flazz/vim-colorschemes'
+Bundle 'tpope/vim-fugitive'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -43,7 +44,7 @@ let g:airline_readonly_symbol = '✗'
 let g:airline_theme = 'luna'
 " let g:airline_theme = 'light'
 
-let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#enabled = 1
 
 " Vim markdown config
 let g:vim_markdown_toml_frontmatter = 1
@@ -69,20 +70,22 @@ set encoding=utf-8
 set shiftwidth=4
 set title
 
-" Favorite themes
+" Favorite color schemes
 
+silent! colorscheme triplejelly
+" colorscheme znake
+" colorscheme benlight
+" colorscheme candyman
+" colorscheme jelleybeans
 " colorscheme luna-term
 " colorscheme made_of_color
 " colorscheme desertink
-" colorscheme benlight
-" colorscheme znake
-" colorscheme candyman
-" colorscheme jelleybeans
-silent! colorscheme triplejelly
+"
+highlight LineNr ctermfg=grey
 
 
 " Search
-set hlsearch 	" Highlight search matches
+set hlsearch    " Highlight search matches
 set incsearch   " incremental searching
 set ignorecase  " search case insensitive...
 set smartcase   " unless they contain at least one capital letter
