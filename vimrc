@@ -70,6 +70,7 @@ set list
 set encoding=utf-8
 set shiftwidth=4
 set title
+syntax on
 
 " Favorite color schemes
 
