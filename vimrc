@@ -17,6 +17,7 @@ Bundle 'plasticboy/vim-markdown'
 Bundle 'ervandew/supertab'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'tpope/vim-fugitive'
+Bundle 'rodjek/vim-puppet'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
