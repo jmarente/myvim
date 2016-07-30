@@ -99,3 +99,9 @@ set smartcase   " unless they contain at least one capital letter
 map <silent> <C-f> :NERDTreeToggle<CR>
 map <silent> <C-n> :tabe<CR>
 nnoremap <C-L> :%s/\s\+$//<cr>:let @/=''<CR>:noh<CR> " Remove undesired empty spaces
+
+" Have Vim jump to the last position when reopening a file
+autocmd BufReadPost *
+\ if line("'\"") > 0 && line("'\"") <= line("$") |
+\   exe "normal g`\"" |
+\ endif
