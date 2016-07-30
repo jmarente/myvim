@@ -83,8 +83,10 @@ silent! colorscheme triplejelly
 " silent! colorscheme made_of_color
 " silent! colorscheme desertink
 
-if g:colors_name == 'triplejelly'
-    highlight LineNr ctermfg=grey
+if exists("g:colors_name")
+    if g:colors_name == 'triplejelly'
+        highlight LineNr ctermfg=grey
+    endif
 endif
 
 

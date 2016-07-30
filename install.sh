@@ -33,8 +33,10 @@ if [ ! -d $VIM_PATH ]; then
 fi
 
 # Get vundle
-echo "Downloading vundle..."
-$GIT clone --quiet $VUNDLE_GITHUB $VUNDLE_VIM_PATH
+if [ ! -d "$VUNDLE_VIM_PATH" ]; then
+    echo "Downloading vundle..."
+    $GIT clone --quiet $VUNDLE_GITHUB $VUNDLE_VIM_PATH
+fi
 
 # Get luna color scheme
 echo "Downloading luna color scheme..."
