@@ -34,15 +34,15 @@ set laststatus=2  " always show the status bar
 let g:airline_enable_syntastic = 1
 let g:airline_powerline_fonts = 1
 
-let g:airline_left_sep = '▶'
-let g:airline_right_sep = '◀'
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
 let g:airline_linecolumn_prefix = '␤ '
 let g:airline_fugitive_prefix = '⎇ '
 let g:airline_paste_symbol = 'ρ'
 let g:airline_readonly_symbol = '✗'
-" let g:airline_theme = 'murmur'
+let g:airline_theme = 'murmur'
 " let g:airline_theme = 'simple'
-let g:airline_theme = 'luna'
+" let g:airline_theme = 'luna'
 " let g:airline_theme = 'light'
 
 " let g:airline#extensions#tabline#enabled = 1
@@ -75,8 +75,9 @@ syntax on
 
 " Favorite color schemes
 
-silent! colorscheme triplejelly
-" silent! colorscheme znake
+" silent! colorscheme triplejelly
+silent! colorscheme znake
+set background=dark
 " silent! colorscheme benlight
 " silent! colorscheme candyman
 " silent! colorscheme jelleybeans
