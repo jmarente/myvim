@@ -6,18 +6,18 @@ call vundle#rc()
 
 " let Vundle manage Vundle
 " required!-
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
-Bundle 'scrooloose/nerdtree'
-Bundle 'jistr/vim-nerdtree-tabs'
-Bundle 'bling/vim-airline'
-Bundle 'vim-airline/vim-airline-themes'
-Bundle 'scrooloose/syntastic'
-Bundle 'plasticboy/vim-markdown'
-Bundle 'ervandew/supertab'
-Bundle 'flazz/vim-colorschemes'
-Bundle 'tpope/vim-fugitive'
-Bundle 'rodjek/vim-puppet'
+Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'scrooloose/syntastic'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'ervandew/supertab'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'tpope/vim-fugitive'
+Plugin 'rodjek/vim-puppet'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -40,9 +40,9 @@ let g:airline_linecolumn_prefix = '␤ '
 let g:airline_fugitive_prefix = '⎇ '
 let g:airline_paste_symbol = 'ρ'
 let g:airline_readonly_symbol = '✗'
-let g:airline_theme = 'murmur'
+" let g:airline_theme = 'murmur'
 " let g:airline_theme = 'simple'
-" let g:airline_theme = 'luna'
+let g:airline_theme = 'luna'
 " let g:airline_theme = 'light'
 
 " let g:airline#extensions#tabline#enabled = 1
@@ -75,9 +75,7 @@ syntax on
 
 " Favorite color schemes
 
-" silent! colorscheme triplejelly
-silent! colorscheme znake
-set background=dark
+silent! colorscheme triplejelly
 " silent! colorscheme benlight
 " silent! colorscheme candyman
 " silent! colorscheme jelleybeans
@@ -90,6 +88,7 @@ if exists("g:colors_name")
         highlight LineNr ctermfg=grey
     endif
 endif
+
 
 
 " Search
