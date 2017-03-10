@@ -74,6 +74,10 @@ set title
 set colorcolumn=99
 syntax on
 
+" Change tab depending on file type
+autocmd Filetype html setlocal ts=2 sts=2 sw=2
+autocmd Filetype htmldjango setlocal ts=2 sts=2 sw=2
+
 " Favorite color schemes
 
 silent! colorscheme triplejelly
@@ -101,7 +105,8 @@ set smartcase   " unless they contain at least one capital letter
 
 " Maps
 map <silent> <C-f> :NERDTreeToggle<CR>
-map <silent> <C-n> :tabe<CR>
+nmap <silent> <C-N> :set invnumber<CR>
+nmap <silent> <C-n><c-n> :tabe<CR>
 nnoremap <C-L> :%s/\s\+$//<cr>:let @/=''<CR>:noh<CR> " Remove undesired empty spaces
 
 " Have Vim jump to the last position when reopening a file
