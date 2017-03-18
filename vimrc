@@ -26,7 +26,7 @@ filetype plugin indent on    " required
 
 " NeerdTree config
 let g:nerdtree_tabs_open_on_console_startup=1
-let NERDTreeIgnore = ['.vim$', '\~$', '.*\.pyc$', '.*.pid', '.*\.o$', '.*\.pyc\$class']
+let NERDTreeIgnore = ['.vim$', '\~$', '.*\.pyc$', '.*.pid', '.*\.o$', '.*\.pyc\$class', '__pycache__']
 
 " Airline config
 set t_Co=256
