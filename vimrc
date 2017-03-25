@@ -18,6 +18,7 @@ Plugin 'ervandew/supertab'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'tpope/vim-fugitive'
 Plugin 'rodjek/vim-puppet'
+Plugin 'vim-scripts/indentpython.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
