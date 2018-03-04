@@ -39,13 +39,13 @@ if [ ! -d "$VUNDLE_VIM_PATH" ]; then
 fi
 
 # Get luna color scheme
-echo "Downloading luna color scheme..."
-$GIT clone --quiet $LUNA_SCHEME_GITHUB $LUNA_TMP_PATH
-if [ -d $LUNA_TMP_PATH ] && [ -d "${LUNA_TMP_PATH}colors" ]; then
-    $CP ${LUNA_TMP_PATH}colors/* ${VIM_PATH}/colors/
-else 
-    echo "Warning: luna color scheme could not be downloaded"
-fi
+# echo "Downloading luna color scheme..."
+# $GIT clone --quiet $LUNA_SCHEME_GITHUB $LUNA_TMP_PATH
+# if [ -d $LUNA_TMP_PATH ] && [ -d "${LUNA_TMP_PATH}colors" ]; then
+#     $CP ${LUNA_TMP_PATH}colors/* ${VIM_PATH}/colors/
+# else
+#     echo "Warning: luna color scheme could not be downloaded"
+# fi
 
 # Copy vimrc to home
 $CP ./vimrc ${HOME}/.vimrc
@@ -55,7 +55,7 @@ echo "Installing plugins...."
 $VIM +PluginInstall +qall
 
 # Remove temp files
-$RM -rf $LUNA_TMP_PATH
+# $RM -rf $LUNA_TMP_PATH
 
 echo "Done!"
 echo "Your vim is ready to use"
