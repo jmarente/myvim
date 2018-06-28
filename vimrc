@@ -19,6 +19,7 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'tpope/vim-fugitive'
 Plugin 'rodjek/vim-puppet'
 Plugin 'vim-scripts/indentpython.vim'
+Plugin 'isRuslan/vim-es6'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
