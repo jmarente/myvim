@@ -21,6 +21,12 @@ Plugin 'rodjek/vim-puppet'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'isRuslan/vim-es6'
 Plugin 'fgsch/vim-varnish'
+Plugin 'tpope/vim-commentary'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'stephpy/vim-php-cs-fixer'
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
+Plugin 'arnaud-lb/vim-php-namespace'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -53,6 +59,9 @@ let g:airline_theme = 'luna'
 " Vim markdown config
 let g:vim_markdown_toml_frontmatter = 1
 let g:vim_markdown_folding_disabled = 1
+
+" PHP-cs-fixer
+let g:php_cs_fixer_path = "~/.bin/php-cs-fixer"
 
 " SnipMate
 " :let g:snips_trigger_key = '<C-tab>'
@@ -107,10 +116,14 @@ set smartcase   " unless they contain at least one capital letter
 
 
 " Maps
-map <silent> <C-f> :NERDTreeToggle<CR>
+map <silent> <C-t> :NERDTreeToggle<CR>
+map <silent> <C-J> :tabn<CR>
+map <silent> <C-K> :tabp<CR>
 nmap <silent> <C-N> :set invnumber<CR>
 nmap <silent> <C-n><c-n> :tabe<CR>
 nnoremap <C-L> :%s/\s\+$//<cr>:let @/=''<CR>:noh<CR> " Remove undesired empty spaces
+map <silent> <C-d> :Files<CR>
+map <silent> <C-f> :Ag<CR>
 
 " Have Vim jump to the last position when reopening a file
 autocmd BufReadPost *
@@ -119,3 +132,21 @@ autocmd BufReadPost *
 \ endif
 
 command PrettyJson execute "%!python -m json.tool"
+
+" Ctags
+" Open in new tab
+:nnoremap <C-]> <C-w><C-]><C-w>T
+set switchbuf="useopen/usetab"
+" :nnoremap <silent><Leader><C-]> <C-w><C-]><C-w>T
+" :nnoremap <C-]> g<C-]>
+au BufWritePost *.php silent! !eval '[ -f ".git/hooks/ctags" ] && .git/hooks/ctags' &
+
+" php-cs-fixer
+autocmd BufWritePost *.php silent! call PhpCsFixerFixFile()
+
+function! IPhpInsertUse()
+    call PhpInsertUse()
+    call feedkeys('a',  'n')
+endfunction
+autocmd FileType php inoremap <Leader>u <Esc>:call IPhpInsertUse()<CR>
+autocmd FileType php noremap <Leader>u :call PhpInsertUse()<CR>
